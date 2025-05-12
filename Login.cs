@@ -8,7 +8,7 @@ namespace StockManagement
 {
     public partial class Login : Form
     {
-        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mjarb\\OneDrive\\Documents\\stock_management_db.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True";
+        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\SKYMIL\\Documents\\GestionStock.mdf;Integrated Security=True;Connect Timeout=30";
 
         public Login()
         {
@@ -22,7 +22,7 @@ namespace StockManagement
             this.Load += Login_Load;
             btnLogin.Click += btnLogin_Click;
             btnReset.Click += btnReset_Click;
-            lblClose.Click += lblClose_Click;
+            lblClose1.Click += lblClose1_Click;
         }
 
         private void CustomizeControls()
@@ -97,12 +97,22 @@ namespace StockManagement
             txtUsername.Focus();
         }
 
-        private void lblClose_Click(object sender, EventArgs e)
+        private void lblClose1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
         private void Login_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReset_Click_1(object sender, EventArgs e)
         {
 
         }
