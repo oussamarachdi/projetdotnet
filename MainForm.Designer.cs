@@ -34,6 +34,10 @@
             pictureBox7 = new PictureBox();
             label6 = new Label();
             panelSidebar = new Panel();
+            pictureBox5 = new PictureBox();
+            btnDashboard = new Button();
+            pictureBox4 = new PictureBox();
+            btnSales = new Button();
             pictureBox1 = new PictureBox();
             btnExit = new Button();
             pictureBox8 = new PictureBox();
@@ -47,6 +51,8 @@
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panelSidebar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -60,10 +66,9 @@
             panel7.Controls.Add(lblExit);
             panel7.Controls.Add(pictureBox7);
             panel7.Controls.Add(label6);
-            panel7.Location = new Point(139, 0);
-            panel7.Margin = new Padding(2);
+            panel7.Location = new Point(199, 0);
             panel7.Name = "panel7";
-            panel7.Size = new Size(890, 40);
+            panel7.Size = new Size(1271, 55);
             panel7.TabIndex = 5;
             // 
             // lblExit
@@ -71,8 +76,7 @@
             lblExit.AutoSize = true;
             lblExit.Font = new Font("Verdana", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblExit.ForeColor = Color.Crimson;
-            lblExit.Location = new Point(853, 9);
-            lblExit.Margin = new Padding(2, 0, 2, 0);
+            lblExit.Location = new Point(1219, 12);
             lblExit.Name = "lblExit";
             lblExit.Size = new Size(26, 25);
             lblExit.TabIndex = 10;
@@ -83,9 +87,8 @@
             pictureBox7.BackColor = Color.DarkCyan;
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
             pictureBox7.Location = new Point(0, 0);
-            pictureBox7.Margin = new Padding(2);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(51, 39);
+            pictureBox7.Size = new Size(73, 54);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox7.TabIndex = 7;
             pictureBox7.TabStop = false;
@@ -94,16 +97,19 @@
             // 
             label6.AutoSize = true;
             label6.ForeColor = Color.White;
-            label6.Location = new Point(55, 14);
-            label6.Margin = new Padding(2, 0, 2, 0);
+            label6.Location = new Point(79, 19);
             label6.Name = "label6";
-            label6.Size = new Size(182, 13);
+            label6.Size = new Size(260, 18);
             label6.TabIndex = 6;
             label6.Text = "Stock Management Application";
             // 
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.Teal;
+            panelSidebar.Controls.Add(pictureBox5);
+            panelSidebar.Controls.Add(btnDashboard);
+            panelSidebar.Controls.Add(pictureBox4);
+            panelSidebar.Controls.Add(btnSales);
             panelSidebar.Controls.Add(pictureBox1);
             panelSidebar.Controls.Add(btnExit);
             panelSidebar.Controls.Add(pictureBox8);
@@ -115,19 +121,65 @@
             panelSidebar.Controls.Add(pictureBox6);
             panelSidebar.Dock = DockStyle.Left;
             panelSidebar.Location = new Point(0, 0);
-            panelSidebar.Margin = new Padding(2);
             panelSidebar.Name = "panelSidebar";
-            panelSidebar.Size = new Size(140, 433);
+            panelSidebar.Size = new Size(200, 600);
             panelSidebar.TabIndex = 6;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackColor = Color.DarkCyan;
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(2, 455);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(44, 55);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox5.TabIndex = 23;
+            pictureBox5.TabStop = false;
+            // 
+            // btnDashboard
+            // 
+            btnDashboard.BackColor = Color.DarkCyan;
+            btnDashboard.FlatAppearance.BorderSize = 0;
+            btnDashboard.FlatStyle = FlatStyle.Flat;
+            btnDashboard.Location = new Point(1, 455);
+            btnDashboard.Margin = new Padding(4);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(199, 55);
+            btnDashboard.TabIndex = 22;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = Color.DarkCyan;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(3, 379);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(43, 55);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 21;
+            pictureBox4.TabStop = false;
+            // 
+            // btnSales
+            // 
+            btnSales.BackColor = Color.DarkCyan;
+            btnSales.FlatAppearance.BorderSize = 0;
+            btnSales.FlatStyle = FlatStyle.Flat;
+            btnSales.Location = new Point(1, 379);
+            btnSales.Margin = new Padding(4);
+            btnSales.Name = "btnSales";
+            btnSales.Size = new Size(199, 55);
+            btnSales.TabIndex = 20;
+            btnSales.Text = "Sales";
+            btnSales.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.DarkCyan;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1, 392);
-            pictureBox1.Margin = new Padding(2);
+            pictureBox1.Location = new Point(1, 543);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(30, 40);
+            pictureBox1.Size = new Size(43, 55);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 19;
             pictureBox1.TabStop = false;
@@ -137,9 +189,10 @@
             btnExit.BackColor = Color.DarkCyan;
             btnExit.FlatAppearance.BorderSize = 0;
             btnExit.FlatStyle = FlatStyle.Flat;
-            btnExit.Location = new Point(0, 391);
+            btnExit.Location = new Point(0, 541);
+            btnExit.Margin = new Padding(4);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(140, 40);
+            btnExit.Size = new Size(200, 55);
             btnExit.TabIndex = 18;
             btnExit.Text = "Logout";
             btnExit.UseVisualStyleBackColor = false;
@@ -148,10 +201,9 @@
             // 
             pictureBox8.BackColor = Color.DarkCyan;
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(2, 220);
-            pictureBox8.Margin = new Padding(2);
+            pictureBox8.Location = new Point(3, 305);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(30, 40);
+            pictureBox8.Size = new Size(43, 55);
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox8.TabIndex = 16;
             pictureBox8.TabStop = false;
@@ -160,10 +212,9 @@
             // 
             pictureBox2.BackColor = Color.DarkCyan;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(3, 167);
-            pictureBox2.Margin = new Padding(2);
+            pictureBox2.Location = new Point(4, 231);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(30, 40);
+            pictureBox2.Size = new Size(43, 55);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 15;
             pictureBox2.TabStop = false;
@@ -173,9 +224,10 @@
             btnCustomers.BackColor = Color.DarkCyan;
             btnCustomers.FlatAppearance.BorderSize = 0;
             btnCustomers.FlatStyle = FlatStyle.Flat;
-            btnCustomers.Location = new Point(0, 220);
+            btnCustomers.Location = new Point(0, 305);
+            btnCustomers.Margin = new Padding(4);
             btnCustomers.Name = "btnCustomers";
-            btnCustomers.Size = new Size(140, 40);
+            btnCustomers.Size = new Size(200, 55);
             btnCustomers.TabIndex = 12;
             btnCustomers.Text = "Customers";
             btnCustomers.UseVisualStyleBackColor = false;
@@ -185,9 +237,10 @@
             btnCategories.BackColor = Color.DarkCyan;
             btnCategories.FlatAppearance.BorderSize = 0;
             btnCategories.FlatStyle = FlatStyle.Flat;
-            btnCategories.Location = new Point(0, 166);
+            btnCategories.Location = new Point(0, 230);
+            btnCategories.Margin = new Padding(4);
             btnCategories.Name = "btnCategories";
-            btnCategories.Size = new Size(140, 40);
+            btnCategories.Size = new Size(200, 55);
             btnCategories.TabIndex = 10;
             btnCategories.Text = "Categories";
             btnCategories.UseVisualStyleBackColor = false;
@@ -196,10 +249,9 @@
             // 
             pictureBox3.BackColor = Color.DarkCyan;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(2, 112);
-            pictureBox3.Margin = new Padding(2);
+            pictureBox3.Location = new Point(3, 155);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(32, 40);
+            pictureBox3.Size = new Size(46, 55);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 7;
             pictureBox3.TabStop = false;
@@ -210,9 +262,10 @@
             btnItems.BackColor = Color.DarkCyan;
             btnItems.FlatAppearance.BorderSize = 0;
             btnItems.FlatStyle = FlatStyle.Flat;
-            btnItems.Location = new Point(0, 112);
+            btnItems.Location = new Point(0, 155);
+            btnItems.Margin = new Padding(4);
             btnItems.Name = "btnItems";
-            btnItems.Size = new Size(140, 40);
+            btnItems.Size = new Size(200, 55);
             btnItems.TabIndex = 8;
             btnItems.Text = "Items";
             btnItems.UseVisualStyleBackColor = false;
@@ -222,38 +275,40 @@
             pictureBox6.BackColor = Color.DarkCyan;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
             pictureBox6.Location = new Point(0, 0);
-            pictureBox6.Margin = new Padding(2);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(140, 80);
+            pictureBox6.Size = new Size(200, 111);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 8;
             pictureBox6.TabStop = false;
             // 
             // panelContent
             // 
-            panelContent.Location = new Point(139, 37);
+            panelContent.Location = new Point(199, 51);
+            panelContent.Margin = new Padding(4);
             panelContent.Name = "panelContent";
-            panelContent.Size = new Size(891, 396);
+            panelContent.Size = new Size(1273, 548);
             panelContent.TabIndex = 7;
             panelContent.Paint += panel3_Paint;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 13F);
+            AutoScaleDimensions = new SizeF(10F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1029, 433);
+            ClientSize = new Size(1470, 600);
             Controls.Add(panelContent);
             Controls.Add(panelSidebar);
             Controls.Add(panel7);
-            Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Font = new Font("Verdana", 12F);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 3, 4, 3);
+            Margin = new Padding(6, 4, 6, 4);
             Name = "MainForm";
             Text = "MainForm";
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             panelSidebar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -279,5 +334,9 @@
         private Button btnCategories;
         private PictureBox pictureBox1;
         private Button btnExit;
+        private Button btnSales;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox5;
+        private Button btnDashboard;
     }
 }

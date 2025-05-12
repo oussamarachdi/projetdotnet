@@ -36,7 +36,6 @@
             label7 = new Label();
             txtItem = new TextBox();
             label8 = new Label();
-            txtCategory = new TextBox();
             label9 = new Label();
             txtPrice = new TextBox();
             label10 = new Label();
@@ -49,6 +48,7 @@
             label12 = new Label();
             dgvItems = new Guna.UI2.WinForms.Guna2DataGridView();
             label14 = new Label();
+            cmbCategory = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvItems).BeginInit();
             SuspendLayout();
             // 
@@ -60,96 +60,79 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(19, 29);
-            label7.Margin = new Padding(2, 0, 2, 0);
+            label7.Location = new Point(27, 40);
             label7.Name = "label7";
-            label7.Size = new Size(34, 13);
+            label7.Size = new Size(47, 18);
             label7.TabIndex = 6;
             label7.Text = "Item";
             label7.Click += label7_Click;
             // 
             // txtItem
             // 
-            txtItem.Location = new Point(19, 49);
-            txtItem.Margin = new Padding(2);
+            txtItem.Location = new Point(27, 68);
             txtItem.Name = "txtItem";
-            txtItem.Size = new Size(182, 20);
+            txtItem.Size = new Size(258, 27);
             txtItem.TabIndex = 5;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(250, 29);
-            label8.Margin = new Padding(2, 0, 2, 0);
+            label8.Location = new Point(357, 40);
             label8.Name = "label8";
-            label8.Size = new Size(60, 13);
+            label8.Size = new Size(81, 18);
             label8.TabIndex = 8;
             label8.Text = "Category";
             label8.Click += label8_Click;
             // 
-            // txtCategory
-            // 
-            txtCategory.Location = new Point(250, 49);
-            txtCategory.Margin = new Padding(2);
-            txtCategory.Name = "txtCategory";
-            txtCategory.Size = new Size(182, 20);
-            txtCategory.TabIndex = 7;
-            // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(456, 29);
-            label9.Margin = new Padding(2, 0, 2, 0);
+            label9.Location = new Point(651, 40);
             label9.Name = "label9";
-            label9.Size = new Size(35, 13);
+            label9.Size = new Size(47, 18);
             label9.TabIndex = 10;
             label9.Text = "Price";
             label9.Click += label9_Click;
             // 
             // txtPrice
             // 
-            txtPrice.Location = new Point(456, 49);
-            txtPrice.Margin = new Padding(2);
+            txtPrice.Location = new Point(651, 68);
             txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(182, 20);
+            txtPrice.Size = new Size(258, 27);
             txtPrice.TabIndex = 9;
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(655, 29);
-            label10.Margin = new Padding(2, 0, 2, 0);
+            label10.Location = new Point(936, 40);
             label10.Name = "label10";
-            label10.Size = new Size(39, 13);
+            label10.Size = new Size(52, 18);
             label10.TabIndex = 12;
             label10.Text = "Stock";
             // 
             // txtStock
             // 
-            txtStock.Location = new Point(655, 49);
-            txtStock.Margin = new Padding(2);
+            txtStock.Location = new Point(936, 68);
             txtStock.Name = "txtStock";
-            txtStock.Size = new Size(182, 20);
+            txtStock.Size = new Size(258, 27);
             txtStock.TabIndex = 11;
             txtStock.TextChanged += textBox4_TextChanged;
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(342, 98);
-            label11.Margin = new Padding(2, 0, 2, 0);
+            label11.Location = new Point(489, 136);
             label11.Name = "label11";
-            label11.Size = new Size(82, 13);
+            label11.Size = new Size(114, 18);
             label11.TabIndex = 14;
             label11.Text = "Manufacturer";
             label11.Click += label11_Click;
             // 
             // txtManufacturer
             // 
-            txtManufacturer.Location = new Point(336, 114);
-            txtManufacturer.Margin = new Padding(2);
+            txtManufacturer.Location = new Point(480, 158);
             txtManufacturer.Name = "txtManufacturer";
-            txtManufacturer.Size = new Size(182, 20);
+            txtManufacturer.Size = new Size(258, 27);
             txtManufacturer.TabIndex = 13;
             // 
             // btnEdit
@@ -158,10 +141,9 @@
             btnEdit.FlatAppearance.BorderSize = 0;
             btnEdit.FlatStyle = FlatStyle.Flat;
             btnEdit.ForeColor = Color.White;
-            btnEdit.Location = new Point(247, 150);
-            btnEdit.Margin = new Padding(2);
+            btnEdit.Location = new Point(353, 208);
             btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(88, 21);
+            btnEdit.Size = new Size(126, 29);
             btnEdit.TabIndex = 15;
             btnEdit.Text = "Edit";
             btnEdit.UseVisualStyleBackColor = false;
@@ -172,10 +154,9 @@
             btnAddItem.FlatAppearance.BorderSize = 0;
             btnAddItem.FlatStyle = FlatStyle.Flat;
             btnAddItem.ForeColor = Color.White;
-            btnAddItem.Location = new Point(385, 150);
-            btnAddItem.Margin = new Padding(2);
+            btnAddItem.Location = new Point(550, 208);
             btnAddItem.Name = "btnAddItem";
-            btnAddItem.Size = new Size(88, 21);
+            btnAddItem.Size = new Size(126, 29);
             btnAddItem.TabIndex = 16;
             btnAddItem.Text = "Add Item";
             btnAddItem.UseVisualStyleBackColor = false;
@@ -186,10 +167,9 @@
             btnDelete.FlatAppearance.BorderSize = 0;
             btnDelete.FlatStyle = FlatStyle.Flat;
             btnDelete.ForeColor = Color.White;
-            btnDelete.Location = new Point(510, 150);
-            btnDelete.Margin = new Padding(2);
+            btnDelete.Location = new Point(729, 208);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(88, 21);
+            btnDelete.Size = new Size(126, 29);
             btnDelete.TabIndex = 17;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = false;
@@ -198,10 +178,9 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(394, 186);
-            label12.Margin = new Padding(2, 0, 2, 0);
+            label12.Location = new Point(563, 258);
             label12.Name = "label12";
-            label12.Size = new Size(63, 13);
+            label12.Size = new Size(92, 18);
             label12.TabIndex = 18;
             label12.Text = "Items List";
             label12.Click += label12_Click;
@@ -212,7 +191,7 @@
             dgvItems.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.Font = new Font("Verdana", 12F);
             dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
@@ -222,18 +201,17 @@
             dgvItems.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.Font = new Font("Verdana", 12F);
             dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvItems.DefaultCellStyle = dataGridViewCellStyle3;
             dgvItems.GridColor = Color.FromArgb(231, 229, 255);
-            dgvItems.Location = new Point(0, 207);
-            dgvItems.Margin = new Padding(2);
+            dgvItems.Location = new Point(0, 287);
             dgvItems.Name = "dgvItems";
             dgvItems.RowHeadersVisible = false;
-            dgvItems.Size = new Size(890, 188);
+            dgvItems.Size = new Size(1271, 260);
             dgvItems.TabIndex = 19;
             dgvItems.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvItems.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -263,19 +241,27 @@
             label14.AutoSize = true;
             label14.BackColor = Color.White;
             label14.ForeColor = Color.Red;
-            label14.Location = new Point(27, 5);
-            label14.Margin = new Padding(2, 0, 2, 0);
+            label14.Location = new Point(39, 7);
             label14.Name = "label14";
-            label14.Size = new Size(117, 13);
+            label14.Size = new Size(167, 18);
             label14.TabIndex = 20;
             label14.Text = "Items Management";
             label14.Click += label14_Click;
             // 
+            // cmbCategory
+            // 
+            cmbCategory.FormattingEnabled = true;
+            cmbCategory.Location = new Point(357, 69);
+            cmbCategory.Name = "cmbCategory";
+            cmbCategory.Size = new Size(258, 26);
+            cmbCategory.TabIndex = 21;
+            // 
             // Items
             // 
-            AutoScaleDimensions = new SizeF(7F, 13F);
+            AutoScaleDimensions = new SizeF(10F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(cmbCategory);
             Controls.Add(label14);
             Controls.Add(dgvItems);
             Controls.Add(label12);
@@ -289,12 +275,12 @@
             Controls.Add(label9);
             Controls.Add(txtPrice);
             Controls.Add(label8);
-            Controls.Add(txtCategory);
             Controls.Add(label7);
             Controls.Add(txtItem);
-            Font = new Font("Verdana", 8F);
+            Font = new Font("Verdana", 12F);
+            Margin = new Padding(4);
             Name = "Items";
-            Size = new Size(891, 396);
+            Size = new Size(1273, 548);
             Load += Items_Load;
             ((System.ComponentModel.ISupportInitialize)dgvItems).EndInit();
             ResumeLayout(false);
@@ -310,7 +296,6 @@
         private Label label9;
         private TextBox txtPrice;
         private Label label8;
-        private TextBox txtCategory;
         private Label label7;
         private TextBox txtItem;
         private Button btnDelete;
@@ -319,6 +304,7 @@
         private Label label12;
         private Label label14;
         private Guna.UI2.WinForms.Guna2DataGridView dgvItems;
+        private ComboBox cmbCategory;
 
         public FormStartPosition StartPosition { get; private set; }
         public FormBorderStyle FormBorderStyle { get; private set; }

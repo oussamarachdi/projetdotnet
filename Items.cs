@@ -7,7 +7,7 @@ namespace StockManagement
 {
     public partial class Items : UserControl
     {
-        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mjarb\\OneDrive\\Documents\\stock_management_db.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True";
+        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\SKYMIL\\Documents\\GestionStock.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True";
 
         public Items()
         {
@@ -27,6 +27,7 @@ namespace StockManagement
         private void Items_Load(object? sender, EventArgs e)
         {
             LoadItems();
+            LoadCategories();
         }
 
         private void LoadItems()
@@ -48,12 +49,33 @@ namespace StockManagement
             }
         }
 
+        private void LoadCategories()
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter("SELECT CategoryID, CategoryName FROM Categories", conn);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    cmbCategory.DisplayMember = "CategoryName";
+                    cmbCategory.ValueMember = "CategoryID";
+                    cmbCategory.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading categories: " + ex.Message);
+                }
+            }
+        }
+
         private void guna2DataGridView1_CellContentClick(object? sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 txtItem.Text = dgvItems.Rows[e.RowIndex].Cells["ItemName"].Value?.ToString();
-                txtCategory.Text = dgvItems.Rows[e.RowIndex].Cells["CategoryID"].Value?.ToString();
+                cmbCategory.SelectedValue = dgvItems.Rows[e.RowIndex].Cells["CategoryID"].Value;
                 txtPrice.Text = dgvItems.Rows[e.RowIndex].Cells["Price"].Value?.ToString();
                 txtStock.Text = dgvItems.Rows[e.RowIndex].Cells["Stock"].Value?.ToString();
                 txtManufacturer.Text = dgvItems.Rows[e.RowIndex].Cells["Manufacturer"].Value?.ToString();
@@ -72,7 +94,7 @@ namespace StockManagement
                         string query = "INSERT INTO Items (ItemName, CategoryId, Price, Stock, Manufacturer) VALUES (@Item, @Category, @Price, @Stock, @Manufacturer)";
                         SqlCommand cmd = new SqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@Item", txtItem.Text.Trim());
-                        cmd.Parameters.AddWithValue("@Category", txtCategory.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Category", cmbCategory.SelectedValue);
                         cmd.Parameters.AddWithValue("@Price", Convert.ToDecimal(txtPrice.Text));
                         cmd.Parameters.AddWithValue("@Stock", Convert.ToInt32(txtStock.Text));
                         cmd.Parameters.AddWithValue("@Manufacturer", txtManufacturer.Text.Trim());
@@ -104,7 +126,7 @@ namespace StockManagement
                         string query = "UPDATE Items SET ItemName=@Item, CategoryID=@Category, Price=@Price, Stock=@Stock, Manufacturer=@Manufacturer WHERE ItemID=@Id";
                         SqlCommand cmd = new SqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@Item", txtItem.Text.Trim());
-                        cmd.Parameters.AddWithValue("@Category", txtCategory.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Category", cmbCategory.SelectedValue);
                         cmd.Parameters.AddWithValue("@Price", Convert.ToDecimal(txtPrice.Text));
                         cmd.Parameters.AddWithValue("@Stock", Convert.ToInt32(txtStock.Text));
                         cmd.Parameters.AddWithValue("@Manufacturer", txtManufacturer.Text.Trim());
@@ -162,7 +184,7 @@ namespace StockManagement
         private bool ValidateInputs()
         {
             return !string.IsNullOrWhiteSpace(txtItem.Text) &&
-                   !string.IsNullOrWhiteSpace(txtCategory.Text) &&
+                   cmbCategory.SelectedValue != null &&
                    decimal.TryParse(txtPrice.Text, out _) &&
                    int.TryParse(txtStock.Text, out _) &&
                    !string.IsNullOrWhiteSpace(txtManufacturer.Text);
@@ -171,49 +193,20 @@ namespace StockManagement
         private void ClearInputs()
         {
             txtItem.Text = "";
-            txtCategory.Text = "";
+            cmbCategory.SelectedIndex = -1;
             txtPrice.Text = "";
             txtStock.Text = "";
             txtManufacturer.Text = "";
         }
-        private void label7_Click(object sender, EventArgs e)
-        {
-            // Handle label7 click event
-        }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-            // Handle label8 click event
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-            // Handle label9 click event
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            // Handle delete logic here
-        }
-        private void label11_Click(object sender, EventArgs e)
-        {
-            // Handle delete logic here
-        }
-        private void label12_Click(object sender, EventArgs e)
-        {
-            // Handle delete logic here
-        }
-        private void label14_Click(object sender, EventArgs e)
-        {
-            // Handle delete logic here
-        }
-        private void button3_Click(object sender, EventArgs e)
-        {
-            // Handle delete logic here
-        }
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-            // Handle delete logic here
-        }
+        private void label7_Click(object sender, EventArgs e) { }
+        private void label8_Click(object sender, EventArgs e) { }
+        private void label9_Click(object sender, EventArgs e) { }
+        private void btnDelete_Click(object sender, EventArgs e) { }
+        private void label11_Click(object sender, EventArgs e) { }
+        private void label12_Click(object sender, EventArgs e) { }
+        private void label14_Click(object sender, EventArgs e) { }
+        private void button3_Click(object sender, EventArgs e) { }
+        private void textBox4_TextChanged(object sender, EventArgs e) { }
     }
 }

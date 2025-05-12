@@ -54,9 +54,10 @@
             label14.AutoSize = true;
             label14.BackColor = Color.White;
             label14.ForeColor = Color.Red;
-            label14.Location = new Point(55, 26);
+            label14.Location = new Point(79, 36);
+            label14.Margin = new Padding(4, 0, 4, 0);
             label14.Name = "label14";
-            label14.Size = new Size(146, 13);
+            label14.Size = new Size(207, 18);
             label14.TabIndex = 52;
             label14.Text = "Categories Management";
             label14.Click += label14_Click;
@@ -67,7 +68,7 @@
             CategoriesList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Verdana", 8F);
+            dataGridViewCellStyle2.Font = new Font("Verdana", 12F);
             dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
@@ -77,17 +78,18 @@
             CategoriesList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Verdana", 8F);
+            dataGridViewCellStyle3.Font = new Font("Verdana", 12F);
             dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             CategoriesList.DefaultCellStyle = dataGridViewCellStyle3;
             CategoriesList.GridColor = Color.FromArgb(231, 229, 255);
-            CategoriesList.Location = new Point(0, 202);
+            CategoriesList.Location = new Point(0, 280);
+            CategoriesList.Margin = new Padding(4, 4, 4, 4);
             CategoriesList.Name = "CategoriesList";
             CategoriesList.RowHeadersVisible = false;
-            CategoriesList.Size = new Size(890, 190);
+            CategoriesList.Size = new Size(1271, 263);
             CategoriesList.TabIndex = 51;
             CategoriesList.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             CategoriesList.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -115,9 +117,10 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(361, 237);
+            label12.Location = new Point(516, 328);
+            label12.Margin = new Padding(4, 0, 4, 0);
             label12.Name = "label12";
-            label12.Size = new Size(92, 13);
+            label12.Size = new Size(132, 18);
             label12.TabIndex = 50;
             label12.Text = "Categories List";
             // 
@@ -127,9 +130,10 @@
             AddBtn.FlatAppearance.BorderSize = 0;
             AddBtn.FlatStyle = FlatStyle.Flat;
             AddBtn.ForeColor = Color.White;
-            AddBtn.Location = new Point(361, 114);
+            AddBtn.Location = new Point(516, 158);
+            AddBtn.Margin = new Padding(4, 4, 4, 4);
             AddBtn.Name = "AddBtn";
-            AddBtn.Size = new Size(126, 29);
+            AddBtn.Size = new Size(180, 40);
             AddBtn.TabIndex = 48;
             AddBtn.Text = "Add Categorie";
             AddBtn.UseVisualStyleBackColor = false;
@@ -141,9 +145,10 @@
             EditBtn.FlatAppearance.BorderSize = 0;
             EditBtn.FlatStyle = FlatStyle.Flat;
             EditBtn.ForeColor = Color.White;
-            EditBtn.Location = new Point(155, 114);
+            EditBtn.Location = new Point(221, 158);
+            EditBtn.Margin = new Padding(4, 4, 4, 4);
             EditBtn.Name = "EditBtn";
-            EditBtn.Size = new Size(126, 29);
+            EditBtn.Size = new Size(180, 40);
             EditBtn.TabIndex = 47;
             EditBtn.Text = "Edit";
             EditBtn.UseVisualStyleBackColor = false;
@@ -151,9 +156,10 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(268, 52);
+            label7.Location = new Point(383, 72);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(97, 13);
+            label7.Size = new Size(134, 18);
             label7.TabIndex = 42;
             label7.Text = "Category Name";
             // 
@@ -163,18 +169,20 @@
             DeleteBtn.FlatAppearance.BorderSize = 0;
             DeleteBtn.FlatStyle = FlatStyle.Flat;
             DeleteBtn.ForeColor = Color.White;
-            DeleteBtn.Location = new Point(537, 114);
+            DeleteBtn.Location = new Point(767, 158);
+            DeleteBtn.Margin = new Padding(4, 4, 4, 4);
             DeleteBtn.Name = "DeleteBtn";
-            DeleteBtn.Size = new Size(126, 29);
+            DeleteBtn.Size = new Size(180, 40);
             DeleteBtn.TabIndex = 49;
             DeleteBtn.Text = "Delete";
             DeleteBtn.UseVisualStyleBackColor = false;
             // 
             // CategoryName
             // 
-            CategoryName.Location = new Point(268, 79);
+            CategoryName.Location = new Point(383, 109);
+            CategoryName.Margin = new Padding(4, 4, 4, 4);
             CategoryName.Name = "CategoryName";
-            CategoryName.Size = new Size(259, 20);
+            CategoryName.Size = new Size(368, 27);
             CategoryName.TabIndex = 41;
             // 
             // guna2Elipse2
@@ -189,16 +197,17 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(395, 174);
+            label8.Location = new Point(564, 241);
+            label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(92, 13);
+            label8.Size = new Size(132, 18);
             label8.TabIndex = 55;
             label8.Text = "Categories List";
             label8.Click += label8_Click;
             // 
             // Categories
             // 
-            AutoScaleDimensions = new SizeF(7F, 13F);
+            AutoScaleDimensions = new SizeF(10F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(label8);
@@ -210,9 +219,10 @@
             Controls.Add(label7);
             Controls.Add(DeleteBtn);
             Controls.Add(CategoryName);
-            Font = new Font("Verdana", 8F);
+            Font = new Font("Verdana", 12F);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "Categories";
-            Size = new Size(891, 396);
+            Size = new Size(1273, 548);
             Load += Categories_Load;
             ((System.ComponentModel.ISupportInitialize)CategoriesList).EndInit();
             ResumeLayout(false);

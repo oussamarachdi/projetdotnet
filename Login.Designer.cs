@@ -42,7 +42,7 @@
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(404, 376);
+            btnLogin.Location = new Point(505, 376);
             btnLogin.Margin = new Padding(4);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(180, 40);
@@ -53,7 +53,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(316, 268);
+            label8.Location = new Point(417, 268);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
             label8.Size = new Size(85, 18);
@@ -62,7 +62,7 @@
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(316, 306);
+            txtPassword.Location = new Point(417, 306);
             txtPassword.Margin = new Padding(4);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(368, 27);
@@ -71,7 +71,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(316, 159);
+            label7.Location = new Point(417, 159);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
             label7.Size = new Size(92, 18);
@@ -80,7 +80,7 @@
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(316, 196);
+            txtUsername.Location = new Point(417, 196);
             txtUsername.Margin = new Padding(4);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(368, 27);
@@ -94,7 +94,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(286, 550);
+            panel1.Size = new Size(286, 600);
             panel1.TabIndex = 21;
             // 
             // pictureBox1
@@ -117,7 +117,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(727, 58);
+            label1.Location = new Point(828, 58);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(98, 18);
@@ -129,7 +129,7 @@
             btnReset.AutoSize = true;
             btnReset.Font = new Font("Verdana", 11.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
             btnReset.ForeColor = Color.Crimson;
-            btnReset.Location = new Point(474, 420);
+            btnReset.Location = new Point(575, 420);
             btnReset.Margin = new Padding(4, 0, 4, 0);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(50, 18);
@@ -141,7 +141,7 @@
             // 
             pictureBox6.BackColor = SystemColors.Control;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(785, 159);
+            pictureBox6.Location = new Point(886, 159);
             pictureBox6.Margin = new Padding(4);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(476, 228);
@@ -167,7 +167,7 @@
             lblClose1.AutoSize = true;
             lblClose1.Font = new Font("Verdana", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblClose1.ForeColor = Color.Crimson;
-            lblClose1.Location = new Point(1235, 51);
+            lblClose1.Location = new Point(1382, 51);
             lblClose1.Margin = new Padding(4, 0, 4, 0);
             lblClose1.Name = "lblClose1";
             lblClose1.Size = new Size(26, 25);
@@ -178,7 +178,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1280, 550);
+            ClientSize = new Size(1470, 600);
             Controls.Add(lblClose1);
             Controls.Add(lblClose);
             Controls.Add(pictureBox6);
@@ -194,7 +194,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4);
             Name = "Login";
-            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             Load += Login_Load_1;
             panel1.ResumeLayout(false);
