@@ -5,30 +5,16 @@ using System.Windows.Forms;
 
 namespace StockManagement
 {
-    public partial class Categories : Form
+    public partial class Categories : UserControl
     {
-        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\SKYMIL\\Documents\\GestionStock.mdf;Integrated Security=True;Connect Timeout=30";
+        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mjarb\\OneDrive\\Documents\\stock_management_db.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True";
 
 
         public Categories()
         {
             InitializeComponent();
-            HookEvents();
         }
-        private void HookEvents()
-        {
-            NavItem.Click += (s, e) => { new Items().Show(); this.Hide(); };
-            NavCategorie.Click += (s, e) => { new Categories().Show(); this.Hide(); };
-            NavCustomers.Click += (s, e) => { new Customers().Show(); this.Hide(); };
-            NavDashboard.Click += (s, e) => { new Billings().Show(); this.Hide(); };
-            label3.Click += (s, e) => Application.Exit();
-
-            AddBtn.Click += AddBtn_Click;
-            EditBtn.Click += EditBtn_Click;
-            DeleteBtn.Click += DeleteBtn_Click;
-            CategoriesList.CellContentClick += CategoriesList_CellContentClick;
-            this.Load += Categories_Load;
-        }
+       
 
         private void Categories_Load(object? sender, EventArgs e)
         {

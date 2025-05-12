@@ -8,7 +8,7 @@ namespace StockManagement
 {
     public partial class Login : Form
     {
-        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\SKYMIL\\Documents\\GestionStock.mdf;Integrated Security=True;Connect Timeout=30";
+        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mjarb\\OneDrive\\Documents\\stock_management_db.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True";
 
         public Login()
         {
@@ -30,7 +30,7 @@ namespace StockManagement
             txtPassword.UseSystemPasswordChar = true;
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void Login_Load(object? sender, EventArgs e)
         {
             ApplyRoundedCorners();
         }
@@ -50,7 +50,7 @@ namespace StockManagement
             }
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object? sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text;
@@ -74,7 +74,8 @@ namespace StockManagement
 
                     if (count > 0)
                     {
-                        Items mainForm = new Items();
+                        // ✅ Load MainForm on successful login
+                        MainForm mainForm = new MainForm();
                         mainForm.Show();
                         this.Hide();
                     }
@@ -90,17 +91,18 @@ namespace StockManagement
             }
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
+        private void btnReset_Click(object? sender, EventArgs e)
         {
             txtUsername.Text = "";
             txtPassword.Text = "";
             txtUsername.Focus();
         }
 
-        private void lblClose1_Click(object sender, EventArgs e)
+        private void lblClose1_Click(object? sender, EventArgs e)
         {
             Application.Exit();
         }
+
 
         private void Login_Load_1(object sender, EventArgs e)
         {
@@ -118,3 +120,5 @@ namespace StockManagement
         }
     }
 }
+
+
